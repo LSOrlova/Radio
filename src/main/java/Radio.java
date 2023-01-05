@@ -32,17 +32,16 @@ public class Radio {
 
     public void nextStation(int newCurrentStationNumber) {
         if (newCurrentStationNumber < 9 && newCurrentStationNumber >= 0) {
-            currentStationNumber = newCurrentStationNumber + 1;}
-            else {
-                currentStationNumber = 0;
-            }
+            currentStationNumber = newCurrentStationNumber + 1;
+        } else {
+            currentStationNumber = 0;
         }
+    }
 
     public void previousStation(int newCurrentStationNumber) {
         if (newCurrentStationNumber <= 9 && newCurrentStationNumber > 0) {
             currentStationNumber = newCurrentStationNumber - 1;
-        }
-        else {
+        } else {
             currentStationNumber = 9;
         }
     }

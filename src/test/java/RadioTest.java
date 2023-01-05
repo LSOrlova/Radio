@@ -16,6 +16,7 @@ class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @ParameterizedTest
     @CsvFileSource(files = "src/test/resources/SetCurrentStationNumber.csv")
     public void shouldSetCurrentStation(int currentStation, int expected) {
@@ -25,6 +26,7 @@ class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @ParameterizedTest
     @CsvFileSource(files = "src/test/resources/NextStation.csv")
     public void shouldGoNextStation(int currentStationNumber, int expected) {
@@ -34,6 +36,7 @@ class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @ParameterizedTest
     @CsvFileSource(files = "src/test/resources/previousStation.csv")
     public void shouldGoPreviousStation(int currentStationNumber, int expected) {
@@ -43,6 +46,7 @@ class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @ParameterizedTest
     @CsvFileSource(files = "src/test/resources/IncreaseVolume.csv")
     public void shouldIncreaseVolume(int currentVolume, int expected) {
@@ -52,6 +56,7 @@ class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @ParameterizedTest
     @CsvFileSource(files = "src/test/resources/decreaseVolume.csv")
     public void shouldDecreaseVolume(int currentVolume, int expected) {
