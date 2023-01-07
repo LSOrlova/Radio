@@ -29,40 +29,44 @@ class RadioTest {
 
     @ParameterizedTest
     @CsvFileSource(files = "src/test/resources/NextStation.csv")
-    public void shouldGoNextStation(int currentStationNumber, int expected) {
+    public void shouldGoNextStation(int newCurrentStationNumber, int expected) {
         Radio cond = new Radio();
-        cond.nextStation(currentStationNumber);
-        int actual = cond.currentStationNumber;
+        cond.setCurrentStationNumber(newCurrentStationNumber);
+        cond.nextStation();
+        int actual = cond.getCurrentStationNumber();
 
         Assertions.assertEquals(expected, actual);
     }
 
     @ParameterizedTest
     @CsvFileSource(files = "src/test/resources/previousStation.csv")
-    public void shouldGoPreviousStation(int currentStationNumber, int expected) {
+    public void shouldGoPreviousStation(int newCurrentStationNumber, int expected) {
         Radio cond = new Radio();
-        cond.previousStation(currentStationNumber);
-        int actual = cond.currentStationNumber;
+        cond.setCurrentStationNumber(newCurrentStationNumber);
+        cond.previousStation();
+        int actual = cond.getCurrentStationNumber();
 
         Assertions.assertEquals(expected, actual);
     }
 
     @ParameterizedTest
     @CsvFileSource(files = "src/test/resources/IncreaseVolume.csv")
-    public void shouldIncreaseVolume(int currentVolume, int expected) {
+    public void shouldIncreaseVolume(int newCurrentVolume, int expected) {
         Radio cond = new Radio();
-        cond.increaseVolume(currentVolume);
-        int actual = cond.currentVolume;
+        cond.setCurrentVolume(newCurrentVolume);
+        cond.increaseVolume();
+        int actual = cond.getCurrentVolume();
 
         Assertions.assertEquals(expected, actual);
     }
 
     @ParameterizedTest
     @CsvFileSource(files = "src/test/resources/decreaseVolume.csv")
-    public void shouldDecreaseVolume(int currentVolume, int expected) {
+    public void shouldDecreaseVolume(int newCurrentVolume, int expected) {
         Radio cond = new Radio();
-        cond.decreaseVolume(currentVolume);
-        int actual = cond.currentVolume;
+        cond.setCurrentVolume(newCurrentVolume);
+        cond.decreaseVolume();
+        int actual = cond.getCurrentVolume();
 
         Assertions.assertEquals(expected, actual);
     }
