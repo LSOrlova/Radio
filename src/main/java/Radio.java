@@ -8,7 +8,7 @@ public class Radio {
     }
 
     public Radio(int stationsQuantity) {
-        maxStation = stationsQuantity;
+        maxStation = stationsQuantity - 1;
     }
 
 
